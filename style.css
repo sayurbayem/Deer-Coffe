@@ -1,0 +1,482 @@
+/* --- SHOP SECTION --- */
+.shop-section {
+  background: #fff;
+  width: 100vw;
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+.shop-filter {
+  gap: 1.2rem;
+}
+.shop-filter-btn {
+  background: none;
+  border: none;
+  font-family: "Inria Sans", sans-serif;
+  font-size: 1.1rem;
+  color: #c2bcbc;
+  padding: 8px 22px 8px 12px;
+  border-radius: 18px;
+  transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+.shop-filter-btn.active {
+  background: #a67c52;
+  color: #fff !important;
+  box-shadow: 0 2px 12px rgba(166, 124, 82, 0.08);
+}
+.shop-filter-btn:focus {
+  outline: none;
+}
+.shop-filter-btn img.filter-icon {
+  margin-right: 8px;
+}
+.shop-menu-list {
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.shop-card-menu {
+  background: #fff;
+  border-radius: 28px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+  min-height: 420px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: box-shadow 0.3s;
+}
+.shop-card-menu:hover {
+  box-shadow: 0 8px 32px rgba(166, 124, 82, 0.13);
+}
+.shop-card-menu img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 28px;
+  border-top-right-radius: 28px;
+}
+.shop-card-menu h4 {
+  font-family: "Playpen Sans", cursive;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #3e2c19;
+  margin-bottom: 0.5rem;
+}
+.shop-card-menu p {
+  font-family: "Inria Sans", sans-serif;
+  font-size: 1rem;
+  color: #6b5b4b;
+  margin-bottom: auto;
+}
+.shop-card-menu .order-btn {
+  position: absolute;
+  right: 24px;
+  bottom: 16px;
+  border-radius: 18px;
+  font-family: "Inria Sans", sans-serif;
+  font-size: 1rem;
+  padding: 6px 20px;
+  background: #a67c52;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(166, 124, 82, 0.08);
+  transition: background 0.2s;
+}
+.shop-card-menu .order-btn:hover {
+  background: #3e2c19;
+}
+.shop-card-menu .order-btn:focus {
+  outline: none;
+}
+.shop-card-menu .order-btn:active {
+  background: #a67c52;
+}
+@media (max-width: 991.98px) {
+  .shop-card-menu {
+    min-height: 380px;
+  }
+}
+@media (max-width: 767.98px) {
+  .shop-card-menu {
+    min-height: 340px;
+  }
+  .shop-section .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+/* Global Styles */
+:root {
+  --primary-color: #6f4e37;
+  --secondary-color: #a67c52;
+  --accent-color: #d4a76a;
+  --text-color: #333333;
+  --light-color: #ffffff;
+  --dark-color: #2c2c2c;
+  --background-color: #ffffff;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+/* Header Styles */
+header {
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+header.scrolled {
+  background-color: var(--light-color);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  padding: 15px 0;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.logo-text {
+  font-family: "Playpen Sans", cursive;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-left: 8px;
+  color: var(--light-color);
+}
+
+header.scrolled .logo-text {
+  color: var(--primary-color);
+}
+
+.navbar-nav .nav-link {
+  color: var(--light-color);
+  font-weight: 500;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+header.scrolled .navbar-nav .nav-link {
+  color: var(--primary-color);
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--accent-color);
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-family: "Playpen Sans", cursive;
+  color: var(--light-color);
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.hero p {
+  color: var(--light-color);
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  padding: 10px 25px;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.btn-outline-light {
+  padding: 10px 25px;
+  font-weight: 600;
+}
+
+/* About Section */
+.about {
+  padding: 0;
+  background-color: var(--light-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.about .container {
+  position: relative;
+  z-index: 2;
+}
+
+.about .row {
+  min-height: 100vh;
+}
+
+.about .col-md-6:first-child {
+  padding: 0;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.about-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.about-content {
+  max-width: 600px;
+}
+
+.about-title {
+  font-family: "Playpen Sans", cursive;
+  color: var(--primary-color);
+  font-size: 3rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.about-year {
+  font-family: "Playpen Sans", cursive;
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.about-description {
+  font-family: "Inria Sans", sans-serif;
+  color: var(--text-color);
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+/* Services Section */
+.services {
+  padding: 100px 0;
+  background-color: var(--light-color);
+}
+
+.services-title {
+  font-family: "Playpen Sans", cursive;
+  color: var(--primary-color);
+  font-size: 3.5rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.service-card {
+  background-color: var(--light-color);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-icon img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.service-name {
+  font-family: "Playpen Sans", cursive;
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.service-description {
+  font-family: "Inria Serif", serif;
+  color: var(--text-color);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.coffee-image-container {
+  position: relative;
+  height: 100%;
+  min-height: 500px;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.coffee-right-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: auto;
+  max-height: 100%;
+  object-fit: cover;
+  object-position: right top;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .navbar-toggler {
+    background-color: var(--light-color);
+  }
+
+  .navbar-collapse {
+    background-color: rgba(249, 245, 240, 0.9);
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+
+  header.scrolled .navbar-collapse {
+    background-color: var(--light-color);
+  }
+
+  .navbar-collapse .nav-link {
+    color: var(--primary-color) !important;
+  }
+
+  .about .row {
+    flex-direction: column;
+  }
+
+  .about .col-md-6:first-child {
+    height: 50vh;
+  }
+
+  .about-content {
+    padding: 30px 15px !important;
+  }
+
+  .about-title {
+    font-size: 2.5rem;
+    margin-top: 0;
+  }
+
+  .about-year {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+
+  .about-description {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .services {
+    padding: 60px 0 0 0;
+  }
+
+  .services-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+
+  .service-card {
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+
+  .service-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+  }
+
+  .service-name {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .service-description {
+    font-size: 0.9rem;
+  }
+
+  .coffee-image-container {
+    position: relative;
+    height: 300px;
+    margin-top: 30px;
+  }
+
+  .coffee-right-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: auto;
+  }
+}

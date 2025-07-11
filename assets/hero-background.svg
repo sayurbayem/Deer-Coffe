@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <rect width="1920" height="1080" fill="#6F4E37"/>
+  <rect width="1920" height="1080" fill="url(#overlay)" opacity="0.7"/>
+  <defs>
+    <linearGradient id="overlay" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#000000;stop-opacity:0.7"/>
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:0.3"/>
+    </linearGradient>
+  </defs>
+</svg>
